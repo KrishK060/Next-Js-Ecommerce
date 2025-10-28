@@ -1,6 +1,8 @@
 import jwt from "jsonwebtoken";
 import * as cookie from "cookie";
 import LogoutButton from "./logout";
+import AddProduct from "./addproduct";
+import Link from "next/link";
 
 export async function getServerSideProps({ req }) {
   const cookies = cookie.parse(req.headers?.cookie || "");
@@ -31,11 +33,15 @@ export async function getServerSideProps({ req }) {
   }
 }
 
-export default function Dashboard({ user }) {
+export default function AdminDashboard({ user }) {
   return (
     <div style={{ padding: "2rem" }}>
-      <h1>Welcome, {user.email}</h1>
+      <h1>Welcome Admin {user.email}</h1>
       <LogoutButton />
+
+      <p>
+        <Link href='/addproduct'>Add Product</Link>
+      </p>
     </div>
   );
 }
