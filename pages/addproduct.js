@@ -26,8 +26,6 @@ export default function AddProduct() {
         setError(data.message || "Invalid input");
         return;
       }
-
-      // redirect to product list or admin page
       router.push("/admin");
     } catch (err) {
       console.error(err);

@@ -95,4 +95,16 @@
     margin-bottom: 10px;
     text-align: center;
   }
+
+  .previewImage {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+  
   
